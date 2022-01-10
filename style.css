@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;900&display=swap');
+
+:root{
+    --green1: #188709;
+    --green2: #18C809;
+    --black: #090C0D;   
+}
+
+*::selection{
+    background-color: var(--green2);
+    color: var(--black);
+}
+
+body{
+    background-color: #eee;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
+}
+
+body{
+
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--black);
+}
+header .logo i{
+    padding-right: .5rem;
+    color: var(--green1);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 1.5rem;
+    font-weight: 600;
+}
+header .navbar a.active,header .navbar a:hover{
+    font-weight: 700;
+    color: var(--green1);
+    font-size: 2.3rem;
+}
+#actions i,#actions div{
+    font-size: 3rem;
+    background-color: #eee;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: var(--black);
+    margin-left: 1rem;
+}
+#actions i:hover,#actions div:hover{
+    color: var(--green1);
+    transform: rotate(360deg);
+}
+#actions div{
+    display: none;
+}
+#home{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#img{
+    width: 100%;
+    margin-top: 4rem;
+    height: 100vh;
+    z-index: 0;
+}
+#img img{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#apresentation{
+    background: rgba(0,0,0,0.9);
+    width: 100vw;
+    height: 100Vh;
+    z-index: 2;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#apresentation h3{
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+}
+#apresentation span{
+    color: var(--green2);
+}
+#apresentation p{
+    color: #eee;
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
+    max-width: 800px;
+}
+#apresentation a{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    padding: .5rem 1rem;
+    border: 2px solid #fff;
+    border-radius: .5rem;
+}
+#apresentation a:hover{
+    border: 2px solid var(--green2);
+    color: var(--green2);
+    transform: scale(1.1);
+    box-shadow: 0 .5rem 1rem var(--green2);
+}
+#speciality{
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    outline: 1px solid var(--black);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+}
+.container h3{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.container h3 span{
+    color: var(--green1);
+}
+.products-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+    outline: .1rem solid var(--black);
+    outline-offset: -1rem;
+    max-width: 35rem;
+    min-width: 25rem;
+}
+.product:hover{
+    outline-offset: 0;
+}
+.product:hover i{
+    transform: scale(.9);
+}
+.product i{
+    font-size: 7rem;
+    color: var(--green2);
+    margin-bottom: 1rem;
+}
+.product p{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 930px){
+    #actions div{
+        display: initial;
+    }
+    header .navbar{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 100%;left: 0;right: 0;
+        background-color: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+        transition: none;
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        width: calc(50% - 3rem);
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0, 0, 0, 0.1);
+        border-left: .5rem solid var(--green1);
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 600px){
+    header .navbar a{
+        width: 100%;
+    }
+}
