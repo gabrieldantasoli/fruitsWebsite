@@ -190,7 +190,7 @@ header .navbar a.active,header .navbar a:hover{
 .product p{
     font-size: 2rem;
 }
-#daily,#popular{
+#daily,#popular,#fruits,#vegetables{
     width: 90%;
     max-width: 1200px;
     margin: 1rem auto;
@@ -216,7 +216,7 @@ header .navbar a.active,header .navbar a:hover{
     flex-wrap: wrap;
     text-align: center;
 }
-.prod,.prod1{
+.prod,.prod1,.prod2,.prod3{
     text-align: center;
     padding: 3rem 2rem;
     background:#fff;
@@ -225,23 +225,23 @@ header .navbar a.active,header .navbar a:hover{
     outline-offset: -1rem;
     cursor: pointer;
 }
-.prod:hover,.prod1:hover{
+.prod:hover,.prod1:hover,.prod2:hover,.prod3:hover{
     outline: .2rem solid #000;
     outline-offset: 0;
 }
-.prod img,.prod1 img{
+.prod img,.prod1 img,.prod2 img,.prod3 img{
     height: 25rem;
     width: 25rem;
 }
-.prod:hover img,.prod1:hover img{
+.prod:hover img,.prod1:hover img,.prod2:hover img,.prod3:hover img{
     transform: scale(0.9);
 }
-.prod .price,.prod1 .price{
+.prod .price,.prod1 .price,.prod2 .price,.prod3 .price{
     font-size: 2rem;
     font-weight: 500;
     margin-top: .3rem;
 }
-.products-preview,.products-preview1{
+.products-preview,.products-preview1,.products-preview2,.products-preview3{
     margin-top: 4.5rem;
     position: fixed;
     top: 0;left: 0;
@@ -311,6 +311,62 @@ header .navbar a.active,header .navbar a:hover{
     background-color: #111;
     color: #fff;
 }
+.buy{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.buy h3{
+    font-size: 5rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
+.buy span{
+    color: var(--green1);
+}
+#features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+#features div{
+    background-color: var(--green2);
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 50%;
+    outline: .2rem solid var(--black);
+}
+#features div i{
+    font-size: 12rem;
+}
+#features div p{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.footer{
+    background-color: var(--black);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.footer a{
+    color: var(--green2);
+}
+.footer a:hover{
+    color: var(--green1);
+}
 
 
 
@@ -366,11 +422,31 @@ header .navbar a.active,header .navbar a:hover{
 }
 
 @media (max-width: 450px){
-    #daily,#speciality,#popular{
+    #daily,#speciality,#popular,#fruits,#vegetables{
         width: 100%;
     }
     .prod img,.prod1 img{
         width: 70vw;
+    }
+    .preview img{
+        width: 60%;
+        height: 60%;
+    }
+    .buy h3{
+        font-size: 4rem;
+        color: var(--black);
+        padding-bottom: 1rem;
+    }
+    #features div{
+        width: 20rem;
+        height: 20rem;
+        padding: 1rem;
+    }
+    #features div i{
+        font-size: 10rem;
+    }
+    #features div p{
+        font-size: 2rem;
     }
 }
 @media (max-width: 600px){
